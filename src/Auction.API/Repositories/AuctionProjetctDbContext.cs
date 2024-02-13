@@ -5,10 +5,9 @@ namespace AuctionProject.API.Repositories
 {
     public class AuctionProjetctDbContext : DbContext
     {
+        public AuctionProjetctDbContext(DbContextOptions options) : base(options) { }     
         public DbSet<Auction> Auctions { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source = C:\\Users\\luanx\\Downloads\\leilaoDbNLW.db");
-        }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Offer> Offers { get; set; }
     }
 }
