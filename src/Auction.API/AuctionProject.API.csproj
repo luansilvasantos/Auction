@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -8,9 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Repositories\NovaPasta1\**" />
+    <Compile Remove="Repositories\NovaPasta\**" />
+    <Content Remove="Repositories\NovaPasta1\**" />
+    <Content Remove="Repositories\NovaPasta\**" />
+    <EmbeddedResource Remove="Repositories\NovaPasta1\**" />
+    <EmbeddedResource Remove="Repositories\NovaPasta\**" />
+    <None Remove="Repositories\NovaPasta1\**" />
+    <None Remove="Repositories\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Controllers\HomeController.cs" />
     <Compile Remove="Controllers\ValuesController.cs" />
     <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="Entities\Auction - Cópia.cs" />
+    <Compile Remove="Entities\Class.cs" />
     <Compile Remove="WeatherForecast.cs" />
   </ItemGroup>
 
@@ -25,6 +38,10 @@
 
   <ItemGroup>
     <None Include="C:\Users\luanx\source\repos\Auction\src\Auction.API\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Communication\Responses\" />
   </ItemGroup>
 
 </Project>
